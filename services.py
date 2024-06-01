@@ -239,6 +239,14 @@ def administrar_chatbot(text,number, messageId, name):
             data2=text_Message(number,"*Respuesta*\nNivel de depresión: "+r[0]+"\nNivel de ansiedad: "+r[1]+"\nNivel de estres: "+r[2])
 
             list.append(data2)
+
+            body = "*Te recomendamos agendar cita con uno de nuestros psicólogos* 📱\n   Ana Cristina Marín F.\n   Directora de Desarrollo Humano y Promoción de la Salud\n   572-5552334 Ext. 8350\nSi necesitas algo más no dudes en contactarnos."
+            footer = "Bienestar universitario ICESI"
+            options = ["Menú principal ✅"]
+
+            last = buttonReply_Message(number, options, body, footer, "sed1", messageId)
+
+            list.append(last)
         else:
             body = preguntas.pop()
             footer = "Bienestar Universitario ICESI"
