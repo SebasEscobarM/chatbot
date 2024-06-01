@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 @app.route('/bienvenido', methods=['GET'])
 def  bienvenido():
-    expert_system.menu()
     return 'Bienvenidoooooooooooooo'
 
 @app.route('/webhook', methods=['GET'])
