@@ -45,6 +45,5 @@ def recibir_mensajes():
 
 
 if __name__ == '__main__':
-    config = dotenv_values(".env")
     app.run()
     
