@@ -2,6 +2,7 @@ from flask import Flask, request
 import sett
 import services
 import expert_system
+from dotenv import dotenv_values
 
 app = Flask(__name__)
 
@@ -45,5 +46,6 @@ def recibir_mensajes():
 
 
 if __name__ == '__main__':
-    app.run()
+    config = dotenv_values(".env")
+    app.run(port=config["PORT"])
     
